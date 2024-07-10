@@ -1,0 +1,4 @@
+git add .  # Ajoute toutes les modifications
+git commit -m "Description de vos modifications"  # Commit les modifications avec un message descriptif
+
+git push origin main  # Remplacez `main` par le nom de votre branche si différente
