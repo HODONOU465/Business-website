@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CréaPix</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="styles.css">
+   <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        .section-fond {
+            position: relative;
+            background-image: url('fond1.png');
+            background-size: cover;
+            background-position: center;
+            height: 125vh; /* Ajustez selon vos besoins */
+            overflow: hidden; /* Pour empêcher le débordement d'éléments hors de la section */
+        }
+        .section-fond::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.2); /* Fond sombre semi-transparent */
+        }
+      
+        .hero-section {
+            position: relative;
+            text-align: center;
+            padding: 100px 0; /* Ajustez le padding pour centrer verticalement */
+            background: url('fond1.png') no-repeat center center;
+            background-size: cover;
+            overflow: hidden;
+            animation: backgroundMove 10s infinite linear;
+        }
+        .hero-section .container {
+            position: relative;
+            z-index: 1;
+        }
+        .hero-section .book-image {
+            max-width: 100%; /* Assurez-vous que l'image ne dépasse pas la largeur du conteneur */
+            height: auto; /* Laissez la hauteur s'ajuster automatiquement */
+        }
+        h1 {
+            font-family: 'Poppins';
+            font-size: 17px;
+        }
+        .st1 {
+            font-family: 'Montserrat'; 
+            font-size: 32px;
+            margin-top: 30px;
+        }
+        .st1 > strong > span:not(.nb) {
+            color: rgb(255, 192, 50);
+        }
+        .barrer {
+            text-decoration: line-through;
+        }
+        .cta-btn {
+            background-color: #ffcc00;
+            color: #000;
+            font-weight: bold;
+        }
+        .section {
+            padding: 50px 0;
+        }
+        .testimonial, .service, .team-member {
+            background-color: #333;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .footer {
+            background-color: #222;
+            padding: 20px 0;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            overflow: hidden;
+            margin-top: 30px; /* Ajustez selon vos besoins */
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .bgw{
+            background-color: white;
+        }
+        .txtc{
+            text-align: center;
+        }
+        .highlight {
+            background-color: yellow;
+        }
+        .icon {
+            font-size: 2em;
+            color: rgb(0, 0, 0);
+        }
+        .section-title {
+            font-weight: bold;
+            font-size: 24px;
+        }
+        .section-text {
+            font-size: 16px;
+            font-family: 'Montserrat';
+            font-weight: bold;
+        }
+        .btn-custom {
+            background-color: #FFA500;
+            color: white;
+            font-weight: bold;
+        }
+        .icon-container {
+            padding: 10px;
+            text-align: center;
+        }
+        .fas{
+            margin-right: 10px;
+            color:RGB(0, 86, 179);
+        }
+        .icon-text {
+            display: flex;
+            align-items: center;
+            font-size: 1.5em; /* Adjust this size as needed */
+            
+        }
+        .mod{
+            padding-left: 5px;
+            font-family: 'poppins';
+            font-size: 20px;
+            color: yellow;
+            padding-top: 30px;
+        }
+        .fm{
+            font-family: 'Montserrat';
+            font-weight: bold;
+            font-size: 22px;
+        }
+        .br{
+            border: 1px solid white;
+            border-radius: 10px;
+
+        }
+        .cp{
+            color: rgb(255, 192, 50);
+        }
+ .sections {
+    background-color: #000000;
+    padding: 50px 0;
+}
+
+.custom-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #e1e1e1;
+    transition: box-shadow 0.3s ease;
+}
+
+.custom-card:hover {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+.custom-card-body {
+    padding: 20px;
+    color: #000000;
+}
+
+.icon-container {
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: yellow;
+}
+
+.icon-container .custom-card-body {
+    padding: 15px;
+}
+
+.icon {
+    font-size: 1.5rem;
+}
+
+.mod {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+.btn-custom {
+    background-color:#ffcc00;
+    color: black;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #b0bd04;
+}
+
+
+    </style>
+      <script src="https://kit.fontawesome.com/fa277efe1d.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero-section section-fond">
+        <div class="container">
+            <h1><em>Pour les <strong>étudiants, professionnels et passionnés</strong> : Maîtrisez <strong>canva</strong> <br>pour libérer votre <strong>créativité</strong> sans complications techniques.</em></h1>
+            <p class="st1"><strong>Maîtrisez le design : <span class="nb barrer">Libérez-vous des <br>heures passées devant</span> <span class="barrer">Photoshop pour <br>créer vos visuels.</span>
+                Devenez <span> l'architecte </span> de <br>votre propre <span>succès</span> avec notre <span>pack de <br>formation canva</span>.</strong></p>
+        </div>
+        <div class="container-fluid d-flex justify-content-center align-items-center" >
+            <img src="book.png" alt="Description de l'image" class="img-fluid book-image "  style="height: 280px;">
+        </div>
+    </section>
+    <section class="mt-5 fm">
+        <div class="container fm ">
+            <h3 class="txtc"><strong>C'EST QUOI <span class="cp">CANVA </span> ET POUQUOI FAUT IL ABSOLUEMENT <br> L'APPRENDRE EN 2024?</strong> </h3>
+
+        </div>
+       
+
+    <!-- Video Section -->
+    <section class="section">
+       
+        <div class="container">
+            
+            <div class="row">
+                <div class="col-md-12">
+                   
+                </div>
+               
+            </div>
+        </div>
+    </section>
+    <section >
+        <div class="conatiner">
+            <div class="row txtc fm ">
+                <div class="col-12 fm">
+                    <h3 class="txtc"><strong ><span class="">Pourquoi prendre cette formation?</span></h3>
+                        
+                    </strong>               
+             </div>
+        </div>
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="testimonial">
+                        <p>"Témoignage 1"</p>
+                        <small>- Nom du client</small>
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+    </section>
+    <section >
+        <!--div class="conatiner">
+            <div class="row txtc fm ">
+                <div class="col-12 fm">
+                    <h3 class="txtc"><strong ><span class="">QUEL EST DONC LE CONTENU DE LA FORMATION ?</span></h3>
+                        
+                    </strong>               
+             </div>
+        div>
+         
+    </section>
+
+    <!-- Services Section -->
+    <section class="section bg-green bf-2">
+        <div class="row txtc fm ">
+            <div class="col-12 fm">
+                <h3 class="txtc"><strong ><span class="">QUEL EST DONC LE CONTENU DE LA FORMATION ?</span></h3>
+                    
+                </strong>               
+         </div>
+        <div class="container py-5">
+          
+            <div class="row mb-4">
+                <div class="col-md-10">
+                    <div class="custom-card shadow-sm">
+                        <div class="custom-card-body d-flex align-items-center  animate-on-scroll">
+                            <i class="fas fa-lightbulb mr-3"></i>
+                            <p class="card-text m-0">1. Comprendre l'écosystème de Canva</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 d-flex align-items-center  animate-on-scroll">
+                    <div class="custom-card  text-white shadow-sm icon-container">
+                        <div class="custom-card-body text-center">
+                            <i class="fab fa-youtube icon"></i>
+                            <span class="mod">Module 1</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mb-4">
+                <div class="col-md-10">
+                    <div class="custom-card shadow-sm animate-on-scroll">
+                        <div class="custom-card-body d-flex align-items-center  animate-on-scroll">
+                            <i class="fas fa-lightbulb mr-3"></i>
+                            <p class="card-text m-0">2. Comprendre les outils de création</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 d-flex align-items-center  animate-on-scroll">
+                    <div class="custom-card text-white shadow-sm icon-container">
+                        <div class="custom-card-body text-center">
+                            <i class="fab fa-youtube icon"></i>
+                            <span class="mod">Module 2</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mb-4">
+                <div class="col-md-10">
+                    <div class="custom-card shadow-sm  animate-on-scroll">
+                        <div class="custom-card-body d-flex align-items-center animate-on-scroll">
+                            <i class="fas fa-lightbulb mr-3"></i>
+                            <p class="card-text m-0">3. Créer une bannière de profil LinkedIn</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 d-flex align-items-center  animate-on-scroll">
+                    <div class="custom-card text-white shadow-sm icon-container">
+                        <div class="custom-card-body text-center">
+                            <i class="fab fa-youtube icon"></i>
+                            <span class="mod">Module 3</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mb-4">
+                <div class="col-md-10">
+                    <div class="custom-card shadow-sm animate-on-scroll">
+                        <div class="custom-card-body d-flex align-items-center animate-on-scroll">
+                            <i class="fas fa-lightbulb mr-3"></i>
+                            <p class="card-text m-0">4. Utilisation des modèles pour les réseaux sociaux</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 d-flex align-items-center animate-on-scroll">
+                    <div class="custom-card  text-white shadow-sm icon-container">
+                        <div class="custom-card-body text-center">
+                            <i class="fab fa-youtube icon"></i>
+                            <span class="mod">Module 4</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mb-4">
+                <div class="col-md-10">
+                    <div class="custom-card shadow-sm animate-on-scroll">
+                        <div class="custom-card-body d-flex align-items-center animate-on-scroll">
+                            <i class="fas fa-lightbulb mr-3"></i>
+                            <p class="card-text m-0">5. Publier et partager ses créations</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 d-flex align-items-center animate-on-scroll">
+                    <div class="custom-card  text-white shadow-sm icon-container">
+                        <div class="custom-card-body text-center">
+                            <i class="fab fa-youtube icon"></i>
+                            <span class="mod">Module 5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mb-4">
+                <div class="col-md-10">
+                    <div class="custom-card shadow-sm animate-on-scroll">
+                        <div class="custom-card-body d-flex align-items-center animate-on-scroll">
+                            <i class="fas fa-lightbulb mr-3"></i>
+                            <p class="card-text m-0">6. Produire des présentations visuelles</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 d-flex align-items-center animate-on-scrollr">
+                    <div class="custom-card  text-white shadow-sm icon-container">
+                        <div class="custom-card-body text-center">
+                            <i class="fab fa-youtube icon"></i>
+                            <span class="mod">Module 6</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mb-4">
+                <div class="col-md-10  animate-on-scroll">
+                    <div class="custom-card shadow-sm">
+                        <div class="custom-card-body d-flex align-items-center  animate-on-scroll">
+                            <i class="fas fa-lightbulb mr-3"></i>
+                            <p class="card-text m-0">7. Découvrir d'autres fonctionnalités de Canva</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 d-flex align-items-center  animate-on-scroll">
+                    <div class="custom-card  text-white shadow-sm icon-container">
+                        <div class="custom-card-body text-center">
+                            <i class="fab fa-youtube icon"></i>
+                            <span class="mod">Module 7</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mb-4">
+                <div class="col-md-10">
+                    <div class="custom-card shadow-sm animate-on-scroll">
+                        <div class="custom-card-body d-flex align-items-center  animate-on-scroll">
+                            <i class="fas fa-lightbulb mr-3"></i>
+                            <p class="card-text m-0">8. Conclusion</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 d-flex align-items-center  animate-on-scroll">
+                    <div class="custom-card  text-white shadow-sm icon-container">
+                        <div class="custom-card-body text-center">
+                            <i class="fab fa-youtube icon"></i>
+                            <span class="mod">Module 8</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <button class="btn btn-custom">Je rejoins l’École des Closeurs maintenant</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+  
+    
+    <section >
+    
+        <div class="container">
+            <div class="row txtc fm">
+                <div class="col-12 fm">
+                    <h3 class="txtc"><strong><span>Pourquoi Canva est mon outil de design préféré : mes raisons</span></strong></h3>
+                    <div class="custom-arrow"></div> <!-- Flèche personnalisée -->
+                  
+                </div>
+            </div>
+        </div>
+        
+
+    </section>
+    <!-- mes raisons-->
+  
+
+
+    <section class="section SR">
+        <div class="container">
+            
+            <div class="row">
+                <div class="col-md-3 mb-4 animate-on-scroll">
+                    <div class="reason-block">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-tachometer-alt"></i>
+                        </div>
+                        <p><strong>Facilité d'utilisation :</strong> Prenez rapidement en main tous les outils de Canva pour créer des designs époustouflants.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4 animate-on-scroll">
+                    <div class="reason-block">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <p><strong>Collaboration de groupe simplifiée :</strong> Travaillez en équipe sans effort grâce aux fonctionnalités de collaboration en temps réel de Canva.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4 animate-on-scroll">
+                    <div class="reason-block">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-file-export"></i>
+                        </div>
+                        <p><strong>Exportation fluide et directe :</strong> Exportez vos créations en un clin d'œil, sans tracas.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4 animate-on-scroll">
+                    <div class="reason-block">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <p><strong>Compatibilité avec tous les formats :</strong> Canva prend en charge tous les formats dont vous avez besoin, vous offrant une flexibilité totale.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4 mx-auto mt-2 animate-on-scroll">
+                    <div class="reason-block">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <p><strong>Options avancées de présentation et de planification :</strong> Programmez et présentez vos designs de manière professionnelle et efficace.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row txtc fm ">
+            <div class="col-12 fm">
+                <h3 class="txtc" style="padding-top: 40px;"><strong ><span class="">QUEL EST DONC LE COUT DE LA FORMATION ?</span></h3>
+                    
+                </strong>               
+         </div>
+        
+    </section>
+    
+    <!--section class="mb-5 bw "
+        <div class="conatiner">
+            <div class="row txtc fm ">
+                <div class="col-12 fm">
+                    <h3 class="txtc" style="padding-top: 40px;"><strong ><span class="">QUEL EST DONC LE COUT DE LA FORMATION ?</span></h3>
+                        
+                    </strong>               
+             </div>
+        </div>
+
+    section-->
+
+    <!-- Process Steps Section -->
+         <!-- Section avec Container -->
+         <section class="d-flex align-items-center justify-content-center h-100vh bg">
+            <!--div class="conatiner"
+                <div class="row txtc fm ">
+                    <div class="col-12 fm">
+                        <h3 class="txtc" style="padding-top: 40px;"><strong ><span class="">QUEL EST DONC LE COUT DE LA FORMATION ?</span></h3>
+                            
+                        </strong>               
+                 </div>
+            div-->
+            <div class="container">
+                <div class="coming-soon row text-center">
+                    <div class="col">
+                        <h1>Encore quelques heures</h1>
+                        <p>L'offre est pour l'instant à 6 euro au lieu de <span class="barrer">20euro</span>.</p>
+                        <div class="row countdown justify-content-center">
+                            <div class="col-auto">
+                                <span id="days">130</span>
+                                <div>Jours</div>
+                            </div>
+                            <div class="col-auto">
+                                <span id="hours">13</span>
+                                <div>Heures</div>
+                            </div>
+                            <div class="col-auto">
+                                <span id="minutes">1</span>
+                                <div>Minutes</div>
+                            </div>
+                            <div class="col-auto">
+                                <span id="seconds">23</span>
+                                <div>Secondes</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 text-center">
+                    <button class="btn btn-custom" onclick="window.location.href='https://me.fedapay.com/X9kC__Bc';">Je rejoins l’École des Closeurs maintenant</button>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="mt-5">
+            <div class="container">
+                <h2 class="txtc fm"><strong>Ce que nos clients ont pu faire avec canva  après cette formation</strong></h2>
+
+            </div>
+           
+        </section>
+
+        <p></p>
+
+
+
+    <!-- Team Section -->
+    <section class="section">
+        <div class="container">
+         
+
+            <!-- Gallery -->
+<div class="row">
+    <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+      <img
+        src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+        class="w-100 shadow-1-strong rounded mb-4"
+        alt="Boat on Calm Water"
+      />
+  
+      <img
+        src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain1.webp"
+        class="w-100 shadow-1-strong rounded mb-4"
+        alt="Wintry Mountain Landscape"
+      />
+    </div>
+  
+    <div class="col-lg-4 mb-4 mb-lg-0">
+      <img
+        src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain2.webp"
+        class="w-100 shadow-1-strong rounded mb-4"
+        alt="Mountains in the Clouds"
+      />
+  
+      <img
+        src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+        class="w-100 shadow-1-strong rounded mb-4"
+        alt="Boat on Calm Water"
+      />
+    </div>
+  
+    <div class="col-lg-4 mb-4 mb-lg-0">
+      <img
+        src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(18).webp"
+        class="w-100 shadow-1-strong rounded mb-4"
+        alt="Waves at Sea"
+      />
+  
+      <img
+        src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain3.webp"
+        class="w-100 shadow-1-strong rounded mb-4"
+        alt="Yosemite National Park"
+      />
+    </div>
+  </div>
+  <!-- Gallery -->
+           
+        </div>
+        
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="section text-center">
+        <div class="container">
+            <h2>Prêt à rejoindre le Club des Créatifs Visuels (CréaPix)?</h2>
+            <button class="btn cta-btn">Rejoignez-nous maintenant</button>
+        </div>
+    </section>
+
+ <!-- Footer Section -->
+<footer class="footer text-center">
+    <div class="container">
+        <p>&copy; 2024 Club des Créatifs Visuels (CréaPix). Tous droits réservés.</p>
+        <a href="#">Conditions d'utilisation</a> | 
+        <a href="#">Politique de confidentialité</a>
+        <br>
+        <p class="mt-20">Construit par <a href="https://example.com" target="_blank" style="text-decoration: none; color:inherit;">Hyacinthe Hodonou</a></p>
+    </div>
+</footer>
+
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

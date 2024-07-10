@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+    background-color: #000;
+    color: #fff;
+}
+
+h2 {
+    color: #fff;
+}
+
+.box {
+    background-color: #111;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    padding-top: 100%; /* Maintain aspect ratio */
+}
+
+.image-container img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    border: 5px solid yellow;
+    width: 100%;
+    height: auto;
+}
+
+</style>
+<body>
+    <div class="container text-center my-5">
+        <h2 class="mb-4">En quelques mois, tu pourras :</h2>
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-4 mb-3">
+                <div class="box">
+                    <p>1-Travailler depuis chez toi ou d’où tu le souhaites</p>
+                </div>
+                <div class="box">
+                    <p>2-Travailler à ton rythme depuis chez toi ou d’où tu le souhaites</p>
+                </div>
+                <div class="box">
+                    <p>3-Travailler sans collègues à supporter, ni jugements, ni commérages</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="image-container">
+                    <img src="f1.jpeg" alt="Image" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="box">
+                    <p>4-Être sereine face à ton avenir financier</p>
+                </div>
+                <div class="box">
+                    <p>5-Travailler sans patron ni pression hiérarchique, ou de ton entourage</p>
+                </div>
+                <div class="box">
+                    <p>6-Générer des revenus confortables et conséquents juste avec ton téléphone et une connexion internet</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

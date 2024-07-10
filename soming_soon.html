@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coming Soon</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .coming-soon {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      max-width: 600px;
+      width: 90%;
+    }
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 18px;
+      margin-bottom: 30px;
+      color: #666;
+    }
+    .countdown {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .countdown span {
+      padding: 10px;
+      background-color: #333;
+      color: #fff;
+      border-radius: 5px;
+      margin: 0 5px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="coming-soon">
+  <h1>Coming Soon</h1>
+  <p>Our exciting new project is launching soon!</p>
+  <div class="countdown">
+    <span id="days">00</span>
+    <span id="hours">00</span>
+    <span id="minutes">00</span>
+    <span id="seconds">00</span>
+  </div>
+</div>
+
+<script>
+  // Function to set the countdown date in localStorage
+  function setCountdownDate() {
+    // Set the countdown end date to August 1, 2024
+    var countDownDate = new Date("August 1, 2024 00:00:00").getTime();
+    localStorage.setItem('countdownDate', countDownDate);
+  }
+
+  // Function to get the countdown date from localStorage
+  function getCountdownDate() {
+    return localStorage.getItem('countdownDate');
+  }
+
+  // Check if the countdown date is already set in localStorage
+  if (!getCountdownDate()) {
+    setCountdownDate();
+  }
+
+  // Update the countdown every 1 second
+  var x = setInterval(function() {
+    // Get the countdown date from localStorage
+    var countDownDate = getCountdownDate();
+
+    // Get today's date and time
+    var now = new Date().getTime();
+
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Display the result in the element with id="countdown"
+    document.getElementById("days").innerText = days.toString().padStart(2, '0');
+    document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
+    document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
+    document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
+
+    // If the countdown is finished, write some text
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("countdown").innerText = "EXPIRED";
+    }
+  }, 1000);
+</script>
+
+</body>
+</html>
