@@ -48,3 +48,9 @@ const elements = document.querySelectorAll('.animate-on-scroll');
 elements.forEach(element => {
     observer.observe(element);
 });
+
+/*whatsapp*/
+function openWhatsApp() {
+    window.open('https://wa.me/53040263', '_blank');
+    // Here you can add the functionality to open the chatbot window or modal
+}

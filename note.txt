@@ -14,3 +14,180 @@ Ne manquez pas cette chance de maîtriser Canva et de transformer votre approche
 
 ---
 
+/********************************************/
+
+hyacinthe@hyacinthe-300E4C-300E5C-300E7C:~/Bureau/canva_site$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint:   git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint:   git branch -m <name>
+Initialized empty Git repository in /home/hyacinthe/Bureau/canva_site/.git/
+hyacinthe@hyacinthe-300E4C-300E5C-300E7C:~/Bureau/canva_site$ git add .
+hyacinthe@hyacinthe-300E4C-300E5C-300E7C:~/Bureau/canva_site$ git commit -m "first commit"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'hyacinthe@hyacinthe-300E4C-300E5C-300E7C.(none)')
+hyacinthe@hyacinthe-300E4C-300E5C-300E7C:~/Bureau/canva_site$ ^C
+hyacinthe@hyacinthe-300E4C-300E5C-300E7C:~/Bureau/canva_site$ git config --global user.email "yassintomahugnon@gmail.com" 
+hyacinthe@hyacinthe-300E4C-300E5C-300E7C:~/Bureau/canva_site$ git config --global user.name "HODONOU 465"
+hyacinthe@hyacinthe-300E4C-300E5C-300E7C:~/Bureau/canva_site$ ^[[200~git commit -m "Premier commit"
+^[[201~git: command not found
+hyacinthe@hyacinthe-300E4C-300E5C-300E7C:~/Bureau/canva_site$ ~git commit -m "Premier commit"
+Command '~git' not found, did you mean:
+  command 'qgit' from deb qgit (2.10-2)
+  command 'dgit' from deb dgit (9.15)
+  command 'jgit' from deb jgit-cli (4.11.9-1)
+  command 'git' from deb git (1:2.34.1-1ubuntu1.10)
+Try: sudo apt install <deb name>
+hyacinthe@hyacinthe-300E4C-300E5C-300E7C:~/Bureau/canva_site$ sudo apt update
+[sudo] password for hyacinthe:          
+Sorry, try again.
+[sudo] password for hyacinthe:          
+Atteint :1 http://archive.ubuntu.com/ubuntu jammy InRelease                                              
+Atteint :2 http://archive.ubuntu.com/ubuntu jammy-updates InRelease                                                     
+Atteint :3 http://archive.ubuntu.com/ubuntu jammy-backports InRelease                                                   
+Atteint :4 http://security.ubuntu.com/ubuntu jammy-security InRelease                                                   
+Ign :5 http://packages.linuxmint.com virginia InRelease                                                         
+Atteint :6 http://packages.linuxmint.com virginia Release                 
+Atteint :8 https://packages.microsoft.com/repos/code stable InRelease
+Atteint :9 https://dl.google.com/linux/chrome/deb stable InRelease
+Lecture des listes de paquets... Fait
+Construction de l'arbre des dépendances... Fait
+Lecture des informations d'état... Fait      
+13 paquets peuvent être mis à jour. Exécutez « apt list --upgradable » pour les voir.
+hyacinthe@hyacinthe-300E4C-300E5C-300E7C:~/Bureau/canva_site$ git config --global user.email "yassintomahugnon@gmail.com" 
+hyacinthe@hyacinthe-300E4C-300E5C-300E7C:~/Bureau/canva_site$ git config --global user.name "HODONOU 465"
+hyacinthe@hyacinthe-300E4C-300E5C-300E7C:~/Bureau/canva_site$ git config --global user.email
+git config --global user.name
+yassintomahugnon@gmail.com
+HODONOU 465
+hyacinthe@hyacinthe-300E4C-300E5C-300E7C:~/Bureau/canva_site$ git branch -M main
+hyacinthe@hyacinthe-300E4C-300E5C-300E7C:~/Bureau/canva_site$ git remote add origin https://github.com/HODONOU465/Business-website.git
+hyacinthe@hyacinthe-300E4C-300E5C-300E7C:~/Bureau/canva_site$ git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/HODONOU465/Business-website.git'
+hyacinthe@hyacinthe-300E4C-300E5C-300E7C:~/Bureau/canva_site$ git add .
+git commit -m "Initial commit"
+[main (root-commit) 9334d8d] Initial commit
+ 22 files changed, 1223 insertions(+)
+ create mode 100644 bitcoin.jpeg
+ create mode 100644 book.png
+ create mode 100644 canva.jpeg
+ create mode 100644 f1.jpeg
+ create mode 100644 f2.jpeg
+ create mode 100644 fn1.webp
+ create mode 100644 fn2.jpg
+ create mode 100644 fn4.jpeg
+ create mode 100644 fn7.jpeg
+ create mode 100644 fond.png
+ create mode 100644 fond1.png
+ create mode 100644 fond2.png
+ create mode 100644 gpt.html
+ create mode 100644 ia.html
+ create mode 100644 index.html
+ create mode 100644 intro.jpg
+ create mode 100644 maquette .png
+ create mode 100644 note.txt
+ create mode 100644 scripts.js
+ create mode 100644 soming_soon.html
+ create mode 100644 style.css
+ create mode 100644 styles.css
+hyacinthe@hyacinthe-300E4C-300E5C-300E7C:~/Bureau/canva_site$ git commit -m "first commit"
+On branch main
+nothing to commit, working tree clean
+hyacinthe@hyacinthe-300E4C-300E5C-300E7C:~/Bureau/canva_site$ git branch -M main
+hyacinthe@hyacinthe-300E4C-300E5C-300E7C:~/Bureau/canva_site$ git branch
+* main
+hyacinthe@hyacinthe-300E4C-300E5C-300E7C:~/Bureau/canva_site$ git remote add origin https://github.com/HODONOU465/Business-website.git
+error: remote origin already exists.
+hyacinthe@hyacinthe-300E4C-300E5C-300E7C:~/Bureau/canva_site$ git remote add origin https://github.com/HODONOU465/Business-website.git
+error: remote origin already exists.
+hyacinthe@hyacinthe-300E4C-300E5C-300E7C:~/Bureau/canva_site$ git remote -v
+origin  https://github.com/HODONOU465/Business-website.git (fetch)
+origin  https://github.com/HODONOU465/Business-website.git (push)
+hyacinthe@hyacinthe-300E4C-300E5C-300E7C:~/Bureau/canva_site$ git checkout -b main
+fatal: A branch named 'main' already exists.
+hyacinthe@hyacinthe-300E4C-300E5C-300E7C:~/Bureau/canva_site$ git branch
+* main
+hyacinthe@hyacinthe-300E4C-300E5C-300E7C:~/Bureau/canva_site$ git add .
+git commit -m "Premier commit sur la branche main"
+On branch main
+nothing to commit, working tree clean
+hyacinthe@hyacinthe-300E4C-300E5C-300E7C:~/Bureau/canva_site$ git push -u origin main
+Username for 'https://github.com': HODONOU465 
+Password for 'https://HODONOU465@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/HODONOU465/Business-website.git/'
+hyacinthe@hyacinthe-300E4C-300E5C-300E7C:~/Bureau/canva_site$ git push -u origin main
+Username for 'https://github.com': HODONOU465     
+Password for 'https://HODONOU465@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/HODONOU465/Business-website.git/'
+hyacinthe@hyacinthe-300E4C-300E5C-300E7C:~/Bureau/canva_site$ git push -u origin main
+Username for 'https://github.com': HODONOU465
+Password for 'https://HODONOU465@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/HODONOU465/Business-website.git/'
+hyacinthe@hyacinthe-300E4C-300E5C-300E7C:~/Bureau/canva_site$ git push -u origin main
+Username for 'https://github.com': HODONOU465
+Password for 'https://HODONOU465@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/HODONOU465/Business-website.git/'
+hyacinthe@hyacinthe-300E4C-300E5C-300E7C:~/Bureau/canva_site$ 
+hyacinthe@hyacinthe-300E4C-300E5C-300E7C:~/Bureau/canva_site$ ls -al ~/.ssh
+ls: cannot access '/home/hyacinthe/.ssh': No such file or directory
+hyacinthe@hyacinthe-300E4C-300E5C-300E7C:~/Bureau/canva_site$ git remote set-url origin git@github.com:HODONOU465/Business-website.git
+hyacinthe@hyacinthe-300E4C-300E5C-300E7C:~/Bureau/canva_site$ git remote set-url origin git@github.com:HODONOU465/Business-website.git
+hyacinthe@hyacinthe-300E4C-300E5C-300E7C:~/Bureau/canva_site$ git push -u origin main
+The authenticity of host 'github.com (140.82.121.4)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+Enumerating objects: 24, done.
+Counting objects: 100% (24/24), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (23/23), done.
+Writing objects: 100% (24/24), 8.40 MiB | 1.77 MiB/s, done.
+Total 24 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:HODONOU465/Business-website.git
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+hyacinthe@hyacinthe-300E4C-300E5C-300E7C:~/Bureau/canva_site$ git add .
+hyacinthe@hyacinthe-300E4C-300E5C-300E7C:~/Bureau/canva_site$ git commit -m 
+error: switch `m' requires a value
+hyacinthe@hyacinthe-300E4C-300E5C-300E7C:~/Bureau/canva_site$ git commit -m "VERSION 2"
+[main 9f52828] VERSION 2
+ 1 file changed, 4 insertions(+)
+ create mode 100644 envoi.txt
+hyacinthe@hyacinthe-300E4C-300E5C-300E7C:~/Bureau/canva_site$ git push origin main 
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 430 bytes | 430.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:HODONOU465/Business-website.git
+   9334d8d..9f52828  main -> main
+hyacinthe@hyacinthe-300E4C-300E5C-300E7C:~/Bureau/canva_site$ 

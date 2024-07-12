@@ -221,4 +221,50 @@
 .row > .col-md-3 {
   display: flex;
 }
+/* Modifier la règle pour s'assurer que l'image est visible sur mobile */
+@media (max-width: 768px) {
+  .book-image {
+      display: block;
+      height: auto; /* Pour s'assurer qu'elle est redimensionnée correctement */
+  }
+}
+.tr{
+  border-color: #ddd;
+  width:70% ;
+}
+.fs4{
+  font-size: 25px;
+}
+.img2{
+  height: 320px;
+}
 
+
+/*whatsapp icone */
+.whatsapp-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  border-radius: 40%;
+  padding: 15px;
+  box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
+  text-align: center;
+  cursor: pointer;
+  animation: pulse 2s infinite;
+}
+.whatsapp-icon i {
+  font-size: 24px;
+}
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.1);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
