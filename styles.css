@@ -249,9 +249,7 @@
 .fs4{
   font-size: 25px;
 }
-.img2{
-  height: 320px;
-}
+
 
 
 /*whatsapp icone */
@@ -281,4 +279,7 @@
   100% {
       transform: scale(1);
   }
+}
+.pt{
+  padding-top: 40px;
 }
