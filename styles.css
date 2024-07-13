@@ -48,21 +48,34 @@
 }
 
 @media (max-width: 768px) {
+  .coming-soon {
+    width: 100%;
+  }
+
   .countdown {
     flex-direction: column;
   }
+
   .countdown div {
     margin-bottom: 10px;
   }
+
   .subscribe-form input,
   .subscribe-form button {
     width: 100%;
     margin-top: 10px;
   }
+
   .subscribe-form input {
     margin-top: 0;
   }
+  
+  .btn-custom {
+    width: 100%;
+    margin-top: 20px;
+  }
 }
+
 .animate-on-scroll {
   opacity: 0;
   transform: translateX(-50px); /* Déplacement initial vers la gauche */
@@ -73,6 +86,7 @@
   opacity: 1;
   transform: translateX(0); /* Déplacement à la position d'origine */
 }
+
 /*animation de la fleche*/
 /*
 .custom-arrow {
