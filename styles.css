@@ -287,6 +287,9 @@
   padding-top: 100px;
 }
 /*image d'entete*/
+.book{
+  height: 200px;
+}
 @media (max-width: 768px) {
   .hero-section .container h1 {
       font-size: 1.5rem;
