@@ -283,3 +283,22 @@
 .pt{
   padding-top: 40px;
 }
+.pt4{
+  padding-top: 100px;
+}
+/*image d'entete*/
+@media (max-width: 768px) {
+  .hero-section .container h1 {
+      font-size: 1.5rem;
+  }
+  .hero-section .container p.st1 {
+      font-size: 1rem;
+  }
+  .hero-section .container-fluid {
+      margin-top: 20px;
+  }
+  .hero-section .responsive-img {
+      max-width: 100%;
+      height: auto;
+  }
+}
