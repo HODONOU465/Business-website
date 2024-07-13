@@ -1,3 +1,224 @@
+
+body {
+  background-color: #000;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+.section-fond {
+  position: relative;
+  background-image: url('fond1.png');
+  background-size: cover;
+  background-position: center;
+  height: 125vh; /* Ajustez selon vos besoins */
+  overflow: hidden; /* Pour empêcher le débordement d'éléments hors de la section */
+}
+.section-fond::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2); /* Fond sombre semi-transparent */
+}
+
+.hero-section {
+  position: relative;
+  text-align: center;
+  padding: 100px 0; /* Ajustez le padding pour centrer verticalement */
+  background: url('fond1.png') no-repeat center center;
+  background-size: cover;
+  overflow: hidden;
+  animation: backgroundMove 10s infinite linear;
+}
+.hero-section .container {
+  position: relative;
+  z-index: 1;
+}
+.hero-section .book-image {
+  max-width: 100%; /* Assurez-vous que l'image ne dépasse pas la largeur du conteneur */
+  height: auto; /* Laissez la hauteur s'ajuster automatiquement */
+}
+h1 {
+  font-family: 'Poppins';
+  font-size: 17px;
+}
+.st1 {
+  font-family: 'Montserrat'; 
+  font-size: 32px;
+  margin-top: 30px;
+}
+.st1 > strong > span:not(.nb) {
+  color: rgb(255, 192, 50);
+}
+.barrer {
+  text-decoration: line-through;
+}
+.cp{
+  color: #ffcc00;
+}
+.cta-btn {
+  background-color: #ffcc00;
+  color: #000;
+  font-weight: bold;
+}
+.section {
+  padding: 50px 0;
+}
+.testimonial, .service, .team-member {
+  background-color: #333;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+.footer {
+  background-color: #222;
+  padding: 20px 0;
+}
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+  margin-top: 30px; /* Ajustez selon vos besoins */
+}
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.bgw{
+  background-color: white;
+}
+.txtc{
+  text-align: center;
+}
+.highlight {
+  background-color: yellow;
+}
+.icon {
+  font-size: 2em;
+  color: rgb(0, 0, 0);
+}
+.section-title {
+  font-weight: bold;
+  font-size: 24px;
+}
+.section-text {
+  font-size: 16px;
+  font-family: 'Montserrat';
+  font-weight: bold;
+}
+.btn-custom {
+  background-color: #FFA500;
+  color: white;
+  font-weight: bold;
+}
+.icon-container {
+  padding: 10px;
+  text-align: center;
+}
+.fas{
+  margin-right: 10px;
+  color:RGB(0, 86, 179);
+}
+.icon-text {
+  display: flex;
+  align-items: center;
+  font-size: 1.5em; /* Adjust this size as needed */
+  
+}
+.mod{
+  padding-left: 5px;
+  font-family: 'poppins';
+  font-size: 20px;
+  color: yellow;
+  padding-top: 30px;
+}
+.fm{
+  font-family: 'Montserrat';
+  font-weight: bold;
+  font-size: 22px;
+}
+.br{
+  border: 1px solid white;
+  border-radius: 10px;
+
+}
+.cp{
+  color: rgb(255, 192, 50);
+}
+.sections {
+background-color: #000000;
+padding: 50px 0;
+}
+
+.custom-card {
+background-color: #ffffff;
+border-radius: 10px;
+border: 1px solid #e1e1e1;
+transition: box-shadow 0.3s ease;
+}
+
+.custom-card:hover {
+box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+.custom-card-body {
+padding: 20px;
+color: #000000;
+}
+
+.icon-container {
+border-radius: 10px;
+overflow: hidden;
+background-color: yellow;
+}
+
+.icon-container .custom-card-body {
+padding: 15px;
+}
+
+.icon {
+font-size: 1.5rem;
+}
+
+.mod {
+font-size: 0.8rem;
+font-weight: bold;
+color: rgb(0, 0, 0);
+}
+
+.btn-custom {
+background-color:#ffcc00;
+color: black;
+border: none;
+padding: 15px 30px;
+border-radius: 25px;
+transition: background-color 0.3s ease;
+}
+
+.btn-custom:hover {
+background-color: #b0bd04;
+}
+.fmd {
+background-color: black;
+padding: 30px;
+border-radius: 10px white;
+}
+
+.tc {
+text-align: center;
+margin-bottom: 40px;
+}
+.fs{
+font-size: 20px;
+}
+/**/
 .bg {
   background: url('intro.jpg') no-repeat center center fixed;
   background-size: cover;
@@ -288,7 +509,7 @@
 }
 /*image d'entete*/
 .book{
-  height: 200px;
+  height: 300px;
 }
 @media (max-width: 768px) {
   .hero-section .container h1 {
